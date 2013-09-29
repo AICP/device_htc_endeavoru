@@ -22,4 +22,6 @@
 <resources>
     <!-- Highest setting, leave -1 if it doesn't exist. Default 3 -->
     <integer name="valueDeathRay">-1</integer>
+    <!-- If there is no sysfs-based control mechanism, enable this -->
+    <bool name="useCameraInterface">false</bool>
 </resources>

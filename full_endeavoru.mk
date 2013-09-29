@@ -26,7 +26,7 @@ $(call inherit-product, device/htc/endeavoru/endeavoru.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := full_endeavoru
+PRODUCT_NAME := aicp_endeavoru
 PRODUCT_DEVICE := endeavoru
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Full AOSP on EndeavorU
