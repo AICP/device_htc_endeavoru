@@ -97,7 +97,9 @@ PRODUCT_PACKAGES += \
     tinycap
 
 # Wi-Fi
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/prebuilt/bin/wifi_calibration.sh:system/bin/wifi_calibration.sh
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/bin/wifi_calibration.sh:system/bin/wifi_calibration.sh \
+    $(LOCAL_PATH)/prebuilt/etc/init.crda.sh:system/etc/init.crda.sh
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
     hostapd.conf \
