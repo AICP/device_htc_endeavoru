@@ -70,7 +70,9 @@ PRODUCT_COPY_FILES += \
 
 # Other extra packages
 PRODUCT_PACKAGES += \
-    librs_jni
+    librs_jni \
+    Apollo \
+    CMFileManager
 
 # Bluetooth tools
 $(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
