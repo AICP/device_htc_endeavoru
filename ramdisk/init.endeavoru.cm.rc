@@ -19,6 +19,34 @@ on early-init
     chown system /sys/kernel/tegra_cap/core_cap_state
     chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
+# Settings Tegra3Parts
+    chown system system /sys/android_touch/doubletap2wake
+    chmod 0666 /sys/android_touch/doubletap2wake
+    chown system system /sys/android_touch/s2w_allow_stroke
+    chmod 0666 /sys/android_touch/s2w_allow_stroke
+    chown system system /sys/android_touch/s2w_double_tap_barrier_y
+    chmod 0666 /sys/android_touch/s2w_double_tap_barrier_y
+    chown system system /sys/android_touch/s2w_double_tap_duration
+    chmod 0666 /sys/android_touch/s2w_double_tap_duration
+    chown system system /sys/android_touch/s2w_double_tap_threshold
+    chmod 0666 /sys/android_touch/s2w_double_tap_threshold
+    chown system system /sys/android_touch/s2w_min_distance
+    chmod 0666 /sys/android_touch/s2w_min_distance
+    chown system system /sys/android_touch/s2w_register_threshold
+    chmod 0666 /sys/android_touch/s2w_register_threshold
+    chown system system /sys/android_touch/sweep2wake
+    chmod 0666 /sys/android_touch/sweep2wake
+    chown system system /sys/android_touch/calibration_control
+    chmod 0666 /sys/android_touch/calibration_control
+    chown system system /sys/class/leds/button-backlight/button_brightness
+    chmod 0666 /sys/class/leds/button-backlight/button_brightness
+    chown system system /sys/class/timed_output/vibrator/dutycycle
+    chmod 0666 /sys/class/timed_output/vibrator/dutycycle
+    chown system system /sys/class/leds/button-backlight/brightness
+    chmod 0664 /sys/class/leds/button-backlight/brightness
+    chown system system /sys/class/leds/button-backlight/slow_blink
+    chmod 0664 /sys/class/leds/button-backlight/slow_blink
+
 # Interactive governor settings
     chown system system /sys/devices/system/cpu/cpufreq/interactive/boost_factor
     chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/boost_factor
