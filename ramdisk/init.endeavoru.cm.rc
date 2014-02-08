@@ -36,6 +36,8 @@ on early-init
     chmod 0666 /sys/android_touch/s2w_register_threshold
     chown system system /sys/android_touch/sweep2wake
     chmod 0666 /sys/android_touch/sweep2wake
+    chown system system /sys/android_touch/calibration_control
+    chmod 0666 /sys/android_touch/calibration_control
 
 # Interactive governor settings
     chown system system /sys/devices/system/cpu/cpufreq/interactive/boost_factor
