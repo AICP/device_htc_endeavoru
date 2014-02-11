@@ -54,8 +54,10 @@ on early-init
 # liblights
     chown system system /sys/class/leds/button-backlight/currents
     chmod 0664 /sys/class/leds/button-backlight/currents
-    chown system system /sys/class/leds/button-backlight/button_brightness
-    chmod 0664 /sys/class/leds/button-backlight/button_brightness
+    chown system system /sys/class/leds/button-backlight/brightness
+    chmod 0664 /sys/class/leds/button-backlight/brightness
+    chown system system /sys/class/leds/button-backlight/slow_blink
+    chmod 0664 /sys/class/leds/button-backlight/slow_blink
 
 # a2dp freq boost
     chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
