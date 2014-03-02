@@ -38,6 +38,10 @@ on early-init
     chmod 0666 /sys/android_touch/sweep2wake
     chown system system /sys/android_touch/calibration_control
     chmod 0666 /sys/android_touch/calibration_control
+    chown system system /sys/class/leds/button-backlight/button_brightness
+    chmod 0666 /sys/class/leds/button-backlight/button_brightness
+    chown system system /sys/class/timed_output/vibrator/dutycycle
+    chmod 0666 /sys/class/timed_output/vibrator/dutycycle
 
 # Interactive governor settings
     chown system system /sys/devices/system/cpu/cpufreq/interactive/boost_factor
