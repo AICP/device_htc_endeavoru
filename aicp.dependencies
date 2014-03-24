@@ -10,7 +10,7 @@
    "branch":      "kitkat"
  },
  {
-   "repository":  "AICP/proprietary_vendor_htc_endeavoru",
+   "repository":  "AICP/proprietary_vendor_htc",
    "target_path": "vendor/htc/endeavoru",
    "branch":      "kitkat"
  }
