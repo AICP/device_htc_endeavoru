@@ -77,6 +77,9 @@ TARGET_KERNEL_CONFIG := cyanogenmod_endeavoru_defconfig
 TARGET_MODULES_SOURCE := "kernel/htc/endeavoru/drivers/net/wireless/compat-wireless_R5.SP2.03"
 TARGET_MODULES_SOURCE_DIR := "compat-wireless_R5.SP2.03"
 
+# External apps on SD
+TARGET_EXTERNAL_APPS = sdcard0
+
 WIFI_MODULES:
 	rm -rf $(KERNEL_OUT)/COMPAT
 	mkdir $(KERNEL_OUT)/COMPAT
