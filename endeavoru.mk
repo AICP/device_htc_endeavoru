@@ -70,7 +70,8 @@ PRODUCT_COPY_FILES += \
 
 # Other extra packages
 PRODUCT_PACKAGES += \
-    librs_jni
+    librs_jni \
+    Mira4U
 
 # Bluetooth tools
 $(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
@@ -84,7 +85,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     tinymix \
     tinyplay \
-    tinycap
+    tinycap \
+    audio.r_submix.default
 
 # Wi-Fi
 $(call inherit-product, hardware/ti/wlan/mac80211/wl128x-wlan-products.mk)
