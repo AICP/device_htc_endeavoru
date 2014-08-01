@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<preference-headers
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <!-- WIRELESS and NETWORKS Section -->
+    <header android:id="@+id/wireless_section"
+        android:title="@string/header_category_wireless_networks" />
+
+    <!-- Wifi -->
+    <header
+        android:id="@+id/wifi_settings"
+        android:fragment="com.android.settings.wifi.WifiSettings"
+        android:title="@string/wifi_settings_title"
+        android:icon="@drawable/ic_settings_wireless" />
+
+    <!-- Bluetooth -->
+    <header
+        android:id="@+id/bluetooth_settings"
+        android:fragment="com.android.settings.bluetooth.BluetoothSettings"
+        android:title="@string/bluetooth_settings_title"
+        android:icon="@drawable/ic_settings_bluetooth2" />
+
+    <!-- Mobile networks -->
+    <header
+        android:id="@+id/mobile_network_settings"
+        android:icon="@drawable/ic_settings_mobilenetworks"
+        android:title="@string/network_settings_title"
+        android:dependency="toggle_airplane">
+        <intent
+            android:action="android.settings.DATA_ROAMING_SETTINGS" />
+    </header>
+
+    <!-- Location -->
+    <header
+        android:fragment="com.android.settings.location.LocationSettings"
+        android:icon="@drawable/ic_settings_location"
+        android:title="@string/location_settings_title"
+        android:id="@+id/location_settings" />
+
+    <!-- Data Usage -->
+    <header
+        android:id="@+id/data_usage_settings"
+        android:fragment="com.android.settings.DataUsageSummary"
+        android:title="@string/data_usage_summary_title"
+        android:icon="@drawable/ic_settings_data_usage" />
+
+    <!-- Operator hook -->
+    <header
+        android:fragment="com.android.settings.WirelessSettings"
+        android:id="@+id/operator_settings">
+        <intent android:action="com.android.settings.OPERATOR_APPLICATION_SETTING" />
+    </header>
+
+    <!-- Other wireless and network controls -->
+    <header
+        settings:includeXmlForSearch="@xml/wireless_settings"
+        android:id="@+id/wireless_settings"
+        android:title="@string/radio_controls_title"
+        android:breadCrumbTitle="@string/wireless_networks_settings_title"
+        android:fragment="com.android.settings.WirelessSettings"
+        android:icon="@drawable/empty_icon" />
+
+    <!-- QUICK LINKS Section -->
+    <header android:title="@string/quick_links_title" />
+
+    <!-- ROMControl -->
+    <header android:icon="@drawable/ic_settings_rom_control"
+            android:title="@string/rom_control_title">
+        <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.aokp.romcontrol.MainActivity"
+                android:targetPackage="com.aokp.romcontrol" />
+    </header>
+
+    <!-- AICP Settings -->
+    <header
+        settings:includeXmlForSearch="@xml/aicp_lab_prefs"
+        android:id="@+id/aicp_settings"
+        android:fragment="com.android.settings.aicp.AicpSettings"
+        android:icon="@drawable/ic_settings_aicp"
+        android:title="@string/aicp_settings_title" />
+
+    <!-- Dark AICP -->
+    <header
+        settings:includeXmlForSearch="@xml/theme_settings"
+        android:id="@+id/theme_settings"
+        android:fragment="com.android.settings.slim.themes.ThemeSettings"
+        android:icon="@drawable/ic_settings_theme"
+        android:title="@string/theme_settings_title" />
+
+    <!-- Profiles -->
+    <header
+        android:id="@+id/profiles_settings"
+        android:icon="@drawable/ic_settings_profiles"
+        android:fragment="com.android.settings.profiles.ProfilesSettings"
+        android:title="@string/profiles_settings_title" />
+
+    <!-- Themes -->
+    <header
+        settings:includeXmlForSearch="@xml/theme_settings_tmobile"
+        android:id="@+id/theme_settings_tmobile"
+        android:title="@string/themes_settings_title"
+        android:breadCrumbTitle="@string/themes_settings_title"
+        android:fragment="com.android.settings.ThemeSettings"
+        android:icon="@drawable/prd_ic_themepacks" />
+
+    <!-- DEVICE Section -->
+    <header android:id="@+id/device_section"
+        android:title="@string/header_category_device" />
+
+    <!-- Home -->
+    <header
+        android:id="@+id/home_settings"
+        android:icon="@drawable/ic_settings_home"
+        android:fragment="com.android.settings.HomeSettings"
+        android:title="@string/home_settings" />
+
+    <!-- Sound -->
+    <header
+        settings:includeXmlForSearch="@xml/sound_settings"
+        android:id="@+id/sound_settings"
+        android:icon="@drawable/ic_settings_sound"
+        android:fragment="com.android.settings.SoundSettings"
+        android:title="@string/sound_settings" />
+
+    <!-- Display -->
+    <header
+        settings:includeXmlForSearch="@xml/display_settings"
+        android:id="@+id/display_settings"
+        android:icon="@drawable/ic_settings_display"
+        android:fragment="com.android.settings.DisplaySettings"
+        android:title="@string/display_settings" />
+
+    <!-- Storage -->
+    <header
+        android:id="@+id/storage_settings"
+        android:fragment="com.android.settings.deviceinfo.Memory"
+        android:icon="@drawable/ic_settings_storage"
+        android:title="@string/storage_settings" />
+
+    <!-- Battery -->
+    <header
+        android:id="@+id/battery_settings"
+        android:fragment="com.android.settings.fuelgauge.PowerUsageSummary"
+        android:icon="@drawable/ic_settings_battery"
+        android:title="@string/power_usage_summary_title" />
+
+    <!-- Backup and reset -->
+    <header
+        android:fragment="com.android.settings.PrivacySettings"
+        android:icon="@drawable/ic_settings_backup"
+        android:title="@string/privacy_settings"
+        android:id="@+id/privacy_settings" />
+
+    <!-- Advanced Settings -->
+    <header android:id="@+id/advanced_settings"
+            android:title="@string/advanced_settings_title"
+            android:icon="@drawable/ic_settings_advanced">
+        <intent
+                android:action="com.cyanogenmod.action.LAUNCH_DEVICE_SETTINGS"
+                android:targetPackage="com.cyanogenmod.settings.device"
+                android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
+    </header>
+
+    <!-- Manage users -->
+    <header
+        android:fragment="com.android.settings.users.UserSettings"
+        android:icon="@drawable/ic_settings_multiuser"
+        android:title="@string/user_settings_title"
+        android:id="@+id/user_settings" />
+
+    <!-- Manage NFC payment apps -->
+    <header
+        android:fragment="com.android.settings.nfc.PaymentSettings"
+        android:icon="@drawable/ic_settings_nfc_payment"
+        android:title="@string/nfc_payment_settings_title"
+        android:id="@+id/nfc_payment_settings" />
+
+    <!-- Manufacturer hook -->
+    <header
+        android:fragment="com.android.settings.WirelessSettings"
+        android:id="@+id/manufacturer_settings">
+        <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
+    </header>
+
+    <!--  ACCOUNTS section -->
+    <header
+            android:id="@+id/account_settings"
+            android:title="@string/account_settings" />
+
+    <header
+            android:id="@+id/account_add"
+            android:title="@string/add_account_label"
+            android:icon="@drawable/ic_menu_add_dark">
+        <intent
+            android:action="android.settings.ADD_ACCOUNT_SETTINGS"/>
+    </header>
+
+    <!-- PERSONAL Section -->
+    <header android:id="@+id/personal_section"
+        android:title="@string/header_category_personal" />
+
+    <!-- Application Settings -->
+    <header
+        android:fragment="com.android.settings.applications.ManageApplications"
+        android:icon="@drawable/ic_settings_applications"
+        android:title="@string/applications_settings"
+        android:id="@+id/application_settings" />
+
+    <!-- App Ops -->
+    <header
+        android:fragment="com.android.settings.applications.AppOpsSummary"
+        android:icon="@drawable/ic_app_ops"
+        android:title="@string/app_ops_settings"
+        android:id="@+id/appops_settings" />
+
+    <!-- Security -->
+    <header
+        settings:includeXmlForSearch="@xml/security_settings"
+        android:fragment="com.android.settings.SecuritySettings"
+        android:icon="@drawable/ic_settings_security"
+        android:title="@string/security_settings_title"
+        android:id="@+id/security_settings" />
+
+    <!-- Language -->
+    <header
+        settings:includeXmlForSearch="@xml/language_settings"
+        android:id="@+id/language_settings"
+        android:fragment="com.android.settings.inputmethod.InputMethodAndLanguageSettings"
+        android:icon="@drawable/ic_settings_language"
+        android:title="@string/language_settings" />
+
+    <!-- SYSTEM Section-->
+    <header android:id="@+id/system_section"
+        android:title="@string/header_category_system" />
+
+    <!-- Date & Time -->
+    <header
+        settings:includeXmlForSearch="@xml/date_time_prefs"
+        android:id="@+id/date_time_settings"
+        android:fragment="com.android.settings.DateTimeSettings"
+        android:icon="@drawable/ic_settings_date_time"
+        android:title="@string/date_and_time_settings_title" />
+
+    <!-- Accessibility feedback -->
+    <header
+        settings:includeXmlForSearch="@xml/accessibility_settings"
+        android:id="@+id/accessibility_settings"
+        android:fragment="com.android.settings.accessibility.AccessibilitySettings"
+        android:icon="@drawable/ic_settings_accessibility"
+        android:title="@string/accessibility_settings" />
+
+    <!-- Print -->
+    <header
+        android:id="@+id/print_settings"
+        android:fragment="com.android.settings.print.PrintSettingsFragment"
+        android:icon="@*android:drawable/ic_print"
+        android:title="@string/print_settings" />
+
+    <!-- ADVANCED Section -->
+    <header android:id="@+id/advanced_section"
+        android:title="@string/advanced_category_title" />
+
+    <!-- Superuser -->
+    <header
+        android:id="@+id/superuser"
+        android:fragment="com.koushikdutta.superuser.PolicyNativeFragment"
+        android:icon="@drawable/ic_action_permission"
+        android:title="@string/superuser" />
+
+    <!-- Development -->
+    <header
+        settings:includeXmlForSearch="@xml/development_prefs"
+        android:id="@+id/development_settings"
+        android:fragment="com.android.settings.DevelopmentSettings"
+        android:icon="@drawable/ic_settings_development"
+        android:title="@string/development_settings_title" />
+
+    <!-- About Device -->
+    <header
+        settings:includeXmlForSearch="@xml/device_info_settings"
+        android:id="@+id/about_settings"
+        android:fragment="com.android.settings.DeviceInfoSettings"
+        android:icon="@drawable/ic_settings_about"
+        android:title="@string/about_settings" />
+
+</preference-headers>
