@@ -24,5 +24,7 @@
     <!-- Processor freq related -->
     <string name="max_cpu_freq_file">/sys/module/cpu_tegra/parameters/cpu_user_cap</string>
 <!--    <string name="min_cpu_freq_file">/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq</string> -->
+    <!-- Advanced Settings -->
+    <bool name="has_advanced_settings">true</bool>
 
 </resources>
