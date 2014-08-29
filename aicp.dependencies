@@ -2,7 +2,7 @@
  {
    "repository":  "AICP/device_htc_tegra3-common",
    "target_path": "device/htc/tegra3-common",
-   "branch":      "kitkat"
+   "branch":      "kitkat-new"
  },
  {
    "repository":  "AICP/kernel_htc_endeavoru",
