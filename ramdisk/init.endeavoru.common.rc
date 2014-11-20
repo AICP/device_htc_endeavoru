@@ -34,13 +34,24 @@ on init
     symlink /storage/sdcard0 /mnt/sdcard
 
 on fs
-    mkdir /rca 0775 radio radio
-    mkdir /rfs 0755 radio radio
+    mkdir /rca 0775 root radio
+    mkdir /rfs 0775 root radio
     mkdir /devlog 0700 root root
+
     mount_all /fstab.endeavoru
-    chmod 0660 /rca/calib.nvm
-    chmod 0660 /rca
-    chmod 0660 /rfs
+
+    chmod 0775 /rca
+    chmod 0664 /rca/calib.nvm
+    chmod 0775 /rfs
+
+    chown root radio /rca
+    chown root radio /rca/calib.nvm
+    chown root radio /rfs
+
+    # requires /rca to be rw
+    restorecon /rca
+    restorecon /rca/calib.nvm
+    restorecon_recursive /rfs
 
     setprop ro.crypto.fuse_sdcard true
 
@@ -345,17 +356,6 @@ service hostapd_bin /system/bin/hostapd -d /data/misc/wifi/hostapd.conf
 
 on property:wlan.driver.status=ok
     chown wifi wifi /sys/devices/platform/wl1271/bt_coex_state
-    
-service initial_regdom /system/bin/initial_regdom.sh
-     disabled
-     oneshot
-
-on property:wlan.driver.status=ok
-    chown wifi wifi /sys/devices/platform/wl1271/bt_coex_state
-    start initial_regdom
-
-on property:init.svc.hostapd_bin=running
-    start initial_regdom
 
 service upd_nvs_wlan0 /system/bin/calibrator set upd_nvs /system/etc/wifi/TQS_D_1.7.ini /proc/calibration /data/misc/wifi/wl1271-nvs-calibrated.bin
      disabled
@@ -420,14 +420,6 @@ start adaptive
 # Start FIL daemon
 #service fil-daemon /system/bin/fild -p /dev/ttyHS0 -s /dev/ttyACM0 -f /dev/ttyACM0 --with-bt3
 #    user radio
-
-service poweron_modem /system/bin/poweron_modem_fls.sh /data/modem_work/
-    class main
-    user root
-    group root
-    oneshot
-#    start gsm0710mux
-    disabled
 
 service uim /system/bin/uim-sysfs
     class core
