@@ -4,7 +4,7 @@ on early-init
     stop recovery
 
 on init
-    mount ext4 /dev/block/mmcblk0p13 /cache wait nosuid nodev
+    mount ext4 /dev/block/mmcblk0p15 /cache wait nosuid nodev
     chown system cache /cache
     chmod 0770 /cache
 
