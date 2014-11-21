@@ -88,10 +88,9 @@ service gsm0710mux /system/bin/gsm0710muxd -s /dev/ttyACM0 -v 5 -n 8 -m basic
 
 service nvm-server /system/bin/nvm_server
     class core
-    cgroup bg
     socket nvm-ctl stream 660 radio radio
     user root
-    group root
+    group radio
     oneshot
 
 #service poweron_modem /system/bin/poweron_modem.sh /data/modem_work/

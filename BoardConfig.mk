@@ -131,3 +131,4 @@ BOARD_SEPOLICY_UNION += \
 	init_shell.te \
 	navl_server.te \
 	uim_sysfs.te \
+	system_server.te \
