@@ -4,7 +4,6 @@ bin/uim-sysfs
 #RIL stuff
 bin/nvm_server
 bin/nvm_client
-bin/mknod
 bin/make_sec_bin
 bin/IMCdownload
 etc/Flash_Loader.conf
