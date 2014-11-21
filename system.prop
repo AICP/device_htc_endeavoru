@@ -243,5 +243,9 @@ persist.preload.common=0
 #net.bt.name=Android
 #dalvik.vm.stack-trace-file=/data/anr/traces.txt
 tf.enable=y
+
+# Indicate that we're using the incompatible data/media layout
+ro.build.endeavoru.newlayout=1
+
 #Fix signal strength indicator
 ro.telephony.ril.config=signalstrength
