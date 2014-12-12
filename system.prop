@@ -209,11 +209,11 @@ wlan.driver.status=
 wifi.HostapdStarted=0
 
 #display
-ro.device.screen_res=4.7 HD 720p SuperLCD 2
+ro.product.display_resolution = 4.7 inch 720p resolution
 
 #camera
-ro.device.rear_cam=8Mpx
-ro.device.front_cam=1.3Mpx
+ro.product.main_camera = 8M
+ro.product.front_camera = 1.3M
 
 # Support HW reset dialog
 ro.product.hwreset=1
@@ -227,9 +227,7 @@ ro.htc.htcmode.data.path = /dev/ttyHSUSB3
 ro.hdmi.enable=true
 
 #CPU / MEM info
-ro.device.chipset=Nvidia Tegra 3
-ro.device.cpu=1.5GHz quad-core Cortex-A9
-ro.device.gpu=ULP GeForce
+ro.product.processor = Quadcore
 ro.product.ram = 1GB
 
 #
