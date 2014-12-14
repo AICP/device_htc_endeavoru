@@ -24,7 +24,7 @@
 -include device/htc/tegra3-common/BoardConfigCommon.mk
 
 # Boot/Recovery image settings
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_PAGESIZE := 2048
 
 TARGET_USERIMAGES_USE_EXT4 := true
