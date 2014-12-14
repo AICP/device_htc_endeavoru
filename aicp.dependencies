@@ -5,7 +5,7 @@
    "branch":      "lp5.0"
  },
  {
-   "repository":  "CyanogenMod/android_kernel_htc_endeavoru",
+   "repository":  "AICP/kernel_htc_endeavoru",
    "target_path": "kernel/htc/endeavoru",
    "branch":      "lp5.0"
  },
