@@ -120,6 +120,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 
 # UMS
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun0/file"
+TARGET_RECOVERY_DEVICE_MODULES += chargeled
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/endeavoru
@@ -134,6 +135,7 @@ BOARD_SEPOLICY_UNION += \
 	init_shell.te \
 	kernel.te \
 	navl_server.te \
+	recovery.te \
 	uim_sysfs.te \
 	system_server.te \
 	vold.te \
