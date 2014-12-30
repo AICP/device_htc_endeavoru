@@ -229,4 +229,7 @@
     <bool name="config_sf_slowBlur">true</bool>
 
     <bool name="config_ui_enableFadingMarquee">true</bool>
+
+    <!-- Boolean to enable adb by default on a per-device basis -->
+    <bool name="config_enableAdbByDefault">true</bool>
 </resources>
