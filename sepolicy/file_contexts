@@ -34,3 +34,6 @@
 /dev/ewtzmu2                      u:object_r:sensors_device:s0
 /dev/ewtzmu2daemon                u:object_r:sensors_device:s0
 /dev/ewtzmu2hal                   u:object_r:sensors_device:s0
+
+# RXN
+/data/gnss(/.*)?                  u:object_r:gps_data_file:s0

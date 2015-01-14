@@ -13,6 +13,20 @@ type rxn_intapp_exec, exec_type, file_type;
 
 init_daemon_domain(rxn_intapp)
 
+wakelock_use(rxn_intapp)
+
+allow rxn_intapp devpts:chr_file { read write };
+#allow rxn_intapp self:capability { dac_read_search dac_override };
+
+allow rxn_intapp gps_data_file:sock_file create_file_perms;
+allow rxn_intapp nav:unix_stream_socket connectto;
+
+allow rxn_intapp gps_data_file:file create_file_perms;
+allow rxn_intapp gps_data_file:dir create_dir_perms;
+
+# PGPSDownloader
+allow untrusted_app rxn_intapp:unix_stream_socket connectto;
+
 
 # CPLC (GPS)
 type cplc, domain;
