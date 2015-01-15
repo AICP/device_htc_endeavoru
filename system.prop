@@ -243,3 +243,5 @@ persist.preload.common=0
 #net.bt.name=Android
 #dalvik.vm.stack-trace-file=/data/anr/traces.txt
 tf.enable=y
+#Fix signal strength indicator
+ro.telephony.ril.config=signalstrength
