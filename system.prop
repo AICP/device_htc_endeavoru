@@ -249,3 +249,6 @@ ro.build.endeavoru.newlayout=1
 
 #Fix signal strength indicator
 ro.telephony.ril.config=signalstrength
+
+# Enable USB OTG (CAF commit to Settings)
+persist.sys.isUsbOtgEnabled=true
