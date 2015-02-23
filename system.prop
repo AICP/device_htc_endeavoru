@@ -245,3 +245,6 @@ persist.preload.common=0
 tf.enable=y
 #Fix signal strength indicator
 ro.telephony.ril.config=signalstrength
+
+# Enable USB OTG (CAF commit to Settings)
+persist.sys.isUsbOtgEnabled=true

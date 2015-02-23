@@ -39,7 +39,6 @@ on init
     symlink /storage/usbdisk /mnt/usbdisk
     symlink /mnt/usbdisk /usbdisk
 
-    export SECONDARY_STORAGE /storage/usbdisk
 
     # NETWORK: NAT setting
     # To  prevent out of WINDOW ACK from making
@@ -381,10 +380,10 @@ on property:ro.hdmi.enable=true
     start hdmid
 
 # fusewrapped external sdcard daemon running as media_rw (1023)
-service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
+service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -t 4 -d /mnt/media_rw/sdcard0 /storage/sdcard0
     class late_start
     disabled
 
-service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
+service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -w 1023 -t 4 -d /mnt/media_rw/usbdisk /storage/usbdisk
     class late_start
     disabled
