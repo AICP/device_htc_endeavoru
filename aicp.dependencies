@@ -2,16 +2,16 @@
  {
    "repository":  "AICP/device_htc_tegra3-common",
    "target_path": "device/htc/tegra3-common",
-   "branch":      "lp5.0"
+   "branch":      "lp5.1"
  },
  {
    "repository":  "AICP/kernel_htc_endeavoru",
    "target_path": "kernel/htc/endeavoru",
-   "branch":      "lp5.0-pb"
+   "branch":      "lp5.1"
  },
  {
    "repository":  "AICP/proprietary_vendor_htc",
    "target_path": "vendor/htc",
-   "branch":      "lp5.0"
+   "branch":      "lp5.1"
  }
 ]
