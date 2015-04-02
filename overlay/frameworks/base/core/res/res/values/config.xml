@@ -249,9 +249,6 @@
 
     <bool name="config_ui_enableFadingMarquee">true</bool>
 
-    <!-- Boolean to enable adb by default on a per-device basis -->
-    <bool name="config_enableAdbByDefault">true</bool>
-
     <!--  Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
     <!--  Maximum number of supported users -->
