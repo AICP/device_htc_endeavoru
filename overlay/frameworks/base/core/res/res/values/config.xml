@@ -282,4 +282,7 @@
     * The device must be provisioned with HDCP keys (for protected content).
     -->
     <bool name="config_enableWifiDisplay">true</bool>
+
+    <!-- Set this true only if the device has touchscreen calibration control. -->
+    <bool name="config_hasCalibrationControl">true</bool>
 </resources>
