@@ -17,6 +17,7 @@
 <resources>
     <!-- LED Flashlight -->
     <bool name="has_led_flash">true</bool>
+
     <!-- Volume Rocker Wake Support. Some devices do not support (PMU) this.
          Setting to false will disable Volume Rocker Wake support -->
     <bool name="config_show_volumeRockerWake">true</bool>
@@ -25,4 +26,5 @@
     <string name="max_cpu_freq_file">/sys/module/cpu_tegra/parameters/cpu_user_cap</string>
 <!--    <string name="min_cpu_freq_file">/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq</string> -->
 
+    <bool name="has_advanced_settings">true</bool>
 </resources>
