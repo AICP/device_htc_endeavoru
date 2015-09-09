@@ -64,3 +64,6 @@ ro.telephony.ril.config=signalstrength
 
 # Enable USB OTG (CAF commit to Settings)
 persist.sys.isUsbOtgEnabled=true
+
+#AICP Device Maintainers
+ro.aicp.maintainer=Ali B (eyosen), LorD ClockaN
