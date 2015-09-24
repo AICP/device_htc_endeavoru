@@ -17,7 +17,4 @@
 <resources>
     <!-- Whether or not the dock settings are to be displayed for this device when docked -->
     <bool name="has_dock_settings">true</bool>
-
-    <!-- Set this true only if the device has touchscreen calibration control. -->
-    <bool name="config_hasCalibrationControl">true</bool>
 </resources>
