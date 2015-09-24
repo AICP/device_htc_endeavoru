@@ -273,4 +273,7 @@
 
     <bool name="config_dreamsSupported">true</bool>
     <bool name="config_dozeAfterScreenOff">true</bool>
+
+    <!-- Hardware keys on/off option -->
+    <bool name="config_hwKeysPref">true</bool>
 </resources>
